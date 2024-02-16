@@ -11,7 +11,7 @@ stages {
         }
         stage ('docker login') {
             steps {
-                sh 'echo dckr_pat_CTSKdJONLaJJFcMLIcVz-FIPhiE | /usr/bin/docker login -u c180468 --password-stdin'
+                sh 'echo dckr_pat_ex-3KWtYTiPCwStp28GaNQiyyFo | /usr/bin/docker login -u c180468 --password-stdin'
             }
         }
         stage ('docker build image') {
