@@ -24,6 +24,10 @@ stages {
                 sh '/usr/bin/docker image push c180468/mywebsite'
             }
         }
-        
+        stage ('docker create service') {
+            steps {
+                sh '/usr/bin/docker service create --name myservice -p 9090:80 --replicas 5 c180468/mywebsite'
+            }
+        }
     }
 }
